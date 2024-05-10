@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <title>Challenge ONE - Text Encriptor</title>
+  </head>
+  <body>
+    <section class="container">
+      <!-- Sección del logo -->
+      <div class="img__container">
+        <img src="./src/LogoAlura.svg" alt="Logo de Alura" class="img__logo" />
+      </div>
+      <!-- Seccion izquierda del encriptador -->
+      <div class="input__container">
+        <!-- Sección del input de texto-->
+        <textarea
+          id="input__text"
+          type="text"
+          class="input__text"
+          placeholder="Escribe tu texto aquí"
+        ></textarea>
+        <!-- Sección de botones -->
+        <div class="btn__container">
+          <p class="warning__text">
+            &#9888; Solo letras, minúsculas y sin acentos.
+          </p>
+          <div class="btn__content">
+            <button class="btn btn-primary" onclick="handleEncriptText()" id="btn__encript">Encriptar</button>
+            <button class="btn btn-secondary" id="btn__desencript" onclick="handleDesencriptText()">Desencriptar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="output__container">
+        <div class="content_without" id="content_without">
+          <!-- Sección del output de texto-->
+          <img src="./src/Muñeco.svg" alt="Imagen" class="img__muneco" />
+          <p class="txt__output-without">Ningún mensaje fue encontrado</p>
+          <p class="txt__body">
+            Ingresa el texto que desees encriptar o Desencriptar
+          </p>
+        </div>
+
+        <div class="content_with" id="content_with">
+          <!-- Sección del output de texto-->
+          <p class="txt_output" id="output_text"></p>
+          <!-- Sección de botones -->
+          <div class="btn__content">
+            <button class="btn btn-secondary" id="btn__copy" onclick="handleCopyText()">Copiar</button>
+            <button class="btn btn-secondary" onclick="handleCleanOutputText()">Limpiar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
